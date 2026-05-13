@@ -1,0 +1,23 @@
+[
+  {
+    "titulo": "Convocatorias individuales PRODEP 2026",
+    "url": "data/convocatoriasPRODEP2026.zip",
+    "esDescargable": true
+  },
+  {
+    "titulo": "Ingreso y Permanencia al SNI - Periodo de Evaluación",
+    "url": "https://conahcyt.mx/sni/",
+    "esDescargable": false
+  },
+  {
+    "titulo": "Convocatoria Copa FutBotMX: Capítulo Visión por Computadora",
+    "url": "https://secihti.mx/futbotmx/",
+    "esDescargable": false
+  },
+  {
+    "titulo": "Maestría en Inteligencia Artificial (IPICYT)",
+    "url": "data/Verano_2026_MIA.pdf",
+    "esDescargable": true
+  }
+  
+]

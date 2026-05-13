@@ -1,0 +1,26 @@
+[
+  {
+    "tipo": "video",
+    "titulo": "Tu primera red neuronal en Python y Tensorflow",
+    "url": "https://www.youtube.com/watch?v=iX_on3VxZzk&t=2s",
+    "subtipo": "youtube"
+  },
+  {
+    "tipo": "video",
+    "titulo": "Introduction to Statistical Analysis in Python",
+    "url": "https://www.youtube.com/watch?v=ZEocIzTVyhU",
+    "subtipo": "youtube"
+  },
+  {
+    "tipo": "video",
+    "titulo": "Exploratory Data Analysis in Pandas | Python Pandas Tutorials",
+    "url": "https://www.youtube.com/watch?v=Liv6eeb1VfE",
+    "subtipo": "youtube"
+  },
+  {
+    "tipo": "enlace",
+    "titulo": "Manual de Identidad TecNM",
+    "url": "data/manual_identidad.pdf",
+    "subtipo": "descargable"
+  }
+]

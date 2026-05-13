@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TecNM Ciudad Valles</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <header>
+    <div class="header-container">
+        <div class="logo-principal">
+            <img src="img/logo_tecnm.png" alt="Logo TecNM">
+        </div>
+
+        <div class="header-text">
+            <h1>Oficina de Proyectos de Investigación</h1>
+            <p>TecNM / Instituto Tecnológico de Ciudad Valles</p>
+            <p>Sistemas y Computación</p>
+        </div>
+
+        <div class="logo-secundario">
+            <img src="img/logo-itvalles.png" alt="Logo IT Ciudad Valles">
+        </div>
+    </div>
+</header>
+
+    <main class="main-layout">
+        <div class="column-left">
+            <section class="card">
+                <h2 class="section-title">Indicadores Académicos</h2>
+                <div class="stats-grid" id="stats-container">
+                    </div>
+            </section>
+            <section class="card">
+                <h2 class="section-title">Líneas de Investigación Autorizadas</h2>
+                <ul id="lista-lineas" class="styled-list"></ul>
+            </section>
+
+            <section class="card">
+                <h2 class="section-title">En lo que se está trabajando actualmente</h2>
+                <div id="lista-trabajo" class="work-container">
+                    </div>
+            </section>
+
+            <section class="card inventory-section">
+                <h2 class="section-title">Manten actualizado tu inventario de productos en investigación</h2>
+                <div class="inventory-content">
+                    <p>Docente investigador: utiliza este espacio para registrar y actualizar tus productos científicos (artículos, proyectos, tesis, patentes ).</p>
+                    <div class="inventory-action">
+                        <a href="https://docs.google.com/spreadsheets/d/11vf9LyVlc5AZBp71Zg0SHVjOrF-OAOeF/edit?usp=sharing&ouid=101622218087188103562&rtpof=true&sd=trueI" target="_blank" class="btn-inventory">
+                            <span class="icon">📝</span> Capturar Información de Productos
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <aside class="column-right">
+            <section class="card secondary-card">
+                <h2 class="section-title">Convocatorias</h2>
+                <div id="lista-convocatorias"></div>
+            </section>
+
+            <section class="card secondary-card">
+                <h2 class="section-title">Recursos de Interés</h2>
+                <div id="lista-recursos"></div>
+            </section>
+        </aside>
+    </main>
+
+    <script src="js/funciones.js"></script>
+</body>
+</html>

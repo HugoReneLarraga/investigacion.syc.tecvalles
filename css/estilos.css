@@ -1,0 +1,308 @@
+/* Paleta de colores oficial TecValles */
+:root {
+    --azul-tec: #1b396a;      /* Azul Institucional */
+    --oro-tec: #d4af37;       /* Dorado de acento */
+    --gris-fondo: #f4f7f6;    /* Fondo suave del portal */
+    --texto: #333333;
+    --blanco: #ffffff;
+}
+
+body {
+    font-family: 'Open Sans', Arial, sans-serif;
+    background-color: var(--gris-fondo);
+    color: var(--texto);
+    margin: 0;
+    line-height: 1.6;
+}
+
+/*
+header {
+    background-color: var(--azul-tec);
+    color: var(--blanco);
+    padding: 1rem 0; 
+    text-align: center;
+    border-bottom: 4px solid var(--oro-tec);
+}
+
+header h1 { margin: 0; font-size: 1.6rem; }
+header p { margin: 5px 0 0; font-size: 0.9rem; opacity: 0.9; }
+*/
+
+header {
+    /* Aplicamos la imagen de fondo adjunta */
+    background-image: url('../img/fondo_encabezado.png');
+    background-size: 100% 100%;          /* Cubre todo el área */
+    background-position: center;    /* Centra la imagen */
+    background-repeat: no-repeatS;
+    
+    color: var(--azul-tec);         /* Cambiamos texto a azul para contraste con el fondo claro */
+    height: 100px;                  /* Altura fija para el header */
+    display: flex;
+    align-items: center;
+    border-bottom: 4px solid var(--oro-tec);
+    position: relative;
+    padding: 0 20px;
+}
+
+.header-container {    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 100%; /* Ocupa el alto total del header */
+}
+
+/* Regla específica para resaltar el logo de TecNM */
+.logo-principal img {
+    height: 90px; /* 80% de los 100px del header */
+    width: auto;
+    filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.2)); /* Sombra para resaltar importancia */
+}
+.logo-secundario img {
+    height: 70px; /* 80% de los 100px del header */
+    width: auto;
+    filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.2)); /* Sombra para resaltar importancia */
+}
+/*
+.header-logo img {
+    height: 80px; 
+    width: auto;
+}
+*/
+.header-text {
+    text-align: center;
+    flex-grow: 1;
+}
+
+.header-text h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--azul-tec);
+}
+
+.header-text p {
+    margin: 0;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #444;
+}
+
+/* Ajuste para móviles */
+@media (max-width: 768px) {
+    header { height: auto; padding: 15px; }
+    .header-container { flex-direction: column; gap: 10px; }
+    .logo-principal img { height: 60px; }
+}
+
+/* Responsivo: En celulares, los logos se hacen más pequeños o se apilan */
+@media (max-width: 600px) {
+    .header-logo img {
+        height: 40px;
+    }
+    .header-text h1 {
+        font-size: 1.1rem;
+    }
+}
+
+
+/* Layout de dos columnas */
+.main-layout {
+    display: flex;
+    max-width: 1200px;
+    margin: 20px auto;
+    gap: 20px;
+    padding: 0 15px;
+}
+
+.column-left { flex: 1 }   /* 65% aprox */
+.column-right { flex: 1; }  /* 35% aprox */
+
+.card {
+    background: var(--blanco);
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+    border-top: 3px solid var(--azul-tec);
+}
+
+.section-title {
+    color: var(--azul-tec);
+    font-size: 1.2rem;
+    margin-top: 0;
+    border-bottom: 2px solid var(--oro-tec);
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+/* Indicadores en formato Vertical */
+.stats-grid {
+    display: flex;
+    flex-direction: column; /* Alinea los elementos hacia abajo */
+    gap: 1px; /* Espaciado entre cada indicador */
+    margin-top: 10px;
+}
+
+.stat-box {
+    background: #f9f9f9;
+    padding: 10px;
+    display: flex;
+    align-items: center; /* Centra verticalmente el contenido */
+    justify-content: space-between; /* Pone el número a un lado y el texto al otro */
+    border-radius: 4px;
+    border-left: 5px solid var(--oro-tec); /* Detalle visual lateral */
+    border-bottom: 1px solid #eee;
+}
+
+.stat-num {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: var(--azul-tec);
+    line-height: 1;
+}
+
+.stat-desc {
+    font-size: 0.9rem;
+    color: #444;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: right;
+}
+
+/* Etiquetas para "En lo que se trabaja" */
+.tag {
+    font-size: 0.7rem;
+    padding: 2px 8px;
+    border-radius: 10px;
+    color: white;
+    margin-right: 8px;
+    font-weight: bold;
+}
+.tag-tesis { background-color: #5cb85c; }
+.tag-proyecto { background-color: var(--azul-tec); }
+.tag-pub { background-color: var(--oro-tec); }
+
+/* --- Sección Recursos (Estilo Preview) --- */
+.recursos-grid {
+    display: flex;
+    flex-direction: column; /* En la columna derecha, mejor uno bajo otro */
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.recurso-item {
+    background: #ffffff;
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid #eee;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.recurso-item h4 { 
+    margin: 0 0 0.8rem 0; 
+    color: var(--azul-tec); 
+    font-size: 0.95rem;
+    line-height: 1.2;
+}
+
+/* Contenedor responsivo para YouTube o Facebook Video */
+.video-responsive {
+    overflow: hidden;
+    padding-bottom: 56.25%; /* Relación de aspecto 16:9 */
+    position: relative;
+    height: 0;
+    border-radius: 4px;
+    background: #000;
+    margin-bottom: 0.5rem;
+}
+
+.video-responsive iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    border: 0;
+}
+
+.btn-enlace {    
+    display: flex;
+    align-items: center;       /* Centro vertical */
+    justify-content: center;    /* Centro horizontal */
+    text-align: center;
+    
+    /*padding: 0.5rem;*/
+
+
+    background-color: var(--blanco);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+    width: 100%; /* Que ocupe todo el ancho en la columna lateral */
+    /*text-align: center;*/
+    font-weight: bold;
+}
+
+.btn-enlace:hover { 
+    background-color: var(--oro-tec); 
+    color: var(--azul-tec) !important;
+}
+
+/* --- Sección Inventario --- */
+.inventory-section {
+    background-color: #fff4e6; /* Un tono crema muy suave para resaltar de las otras */
+    border-top: 3px solid var(--oro-tec); /* Usamos el dorado para distinguir acción */
+}
+
+.inventory-content p {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.inventory-action {
+    display: flex;
+    justify-content: center; /* Centra el botón horizontalmente */
+    padding: 10px 0;
+}
+
+.btn-inventory {
+    display: flex;
+    align-items: center;      /* Centra verticalmente el texto e icono dentro del botón */
+    justify-content: center;   /* Centra horizontalmente el texto dentro del botón */
+    
+    background-color: var(--azul-tec);
+    color: white !important;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.btn-inventory:hover {
+    background-color: white;
+    color: var(--azul-tec) !important;
+    border-color: var(--azul-tec);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.btn-inventory .icon {
+    margin-right: 10px;
+    font-size: 1.3rem;
+}
+
+/* Responsive */
+@media (max-width: 850px) {
+    .main-layout { flex-direction: column; }
+}

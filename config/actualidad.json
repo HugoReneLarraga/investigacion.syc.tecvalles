@@ -1,0 +1,22 @@
+[
+  {
+    "tipo": "PUBLICACIÓN",
+    "titulo": "Artículo: Semantic Segmentation of Sugarcane Crops in UAV Orthoimages Using U-Net",
+    "autor_o_detalle": "Journal of the Indian Society of Remote Sensing - https://doi.org/10.1007/s12524-026-02455-5"
+  },
+  {
+    "tipo": "TESIS",
+    "titulo": "Diseño e implementación de una estación meteorológica basada en IoT para el monitoreo de las condiciones agroclimáticas",
+    "autor_o_detalle": "Estudiante: María Fernanda Mar Martínez, Víctor Martínez Santiago - Asesor: Dr. Omar Espinosa Guerra"
+  },
+  {
+    "tipo": "PROYECTO",
+    "titulo": "Agroplataforma digital de monitoreo para la conservación del maíz nativo en la Huasteca Potosina",
+    "autor_o_detalle": "Financiado por Secihti 2025 - Estatus: En desarrollo - Líder: Dr. Alfredo Barrón Rodríguez"
+  },
+  {
+    "tipo": "PROYECTO",
+    "titulo": "Predicción de la producción de caña de azúcar mediante modelo de machine learning: caso de estudio Huasteca Potosina",
+    "autor_o_detalle": "Registrado por TecNM 2025 - Estatus: Terminado - Líder: Dr. Hugo René Lárraga Altamirano"
+  }  
+]
