@@ -75,24 +75,31 @@ async function renderizarPagina() {
 
     // 4. Convocatorias (Carga desde data/convocatorias.json)
     // ... dentro de la función renderizarPagina, en la sección de Convocatorias:
-    const conv = await cargarSeccion(PATHS.convocatorias);
+   const conv = await cargarSeccion(PATHS.convocatorias);
     const containerC = document.getElementById('lista-convocatorias');
 
     if (containerC && conv) {
         containerC.innerHTML = "";
         conv.forEach(c => {
-            // Decidimos el icono y el atributo download            
-            const atributoDownload = c.esDescargable ? `download="${c.titulo}"` : '';          
+            const esCerrada = c.estado && c.estado.toLowerCase() === 'cerrada';
+            
+            // Define el atributo download únicamente si esDescargable es true
+            const atributoDownload = c.esDescargable ? `download="${c.titulo}"` : '';
+            
+            // Etiqueta llamativa según el estado
+            const badgeHTML = esCerrada 
+                ? `<span class="badge badge-cerrada">⚠️ NO VIGENTE</span>` 
+                : `<span class="badge badge-abierta">VIGENTE</span>`;
 
             containerC.innerHTML += `
-                <div class="convocatoria-item">                    
-                    <a href="${c.url}" ${atributoDownload} target="_blank" class="btn-conv">
-                        <p class="conv-titulo">${c.titulo}</p>
+                <div class="convocatoria-item"> 
+                    <a href="${c.url}" ${atributoDownload} target="_blank" class="conv-link">
+                        <span class="conv-titulo">${c.titulo}</span>
                     </a>
+                    ${badgeHTML}
                 </div>`;
         });
     }
-
     // 5. Recursos (Carga desde data/recursos.json)
     // ... dentro de la sección de carga de Recursos:
     // ... dentro de la función renderizarPagina, sección Recursos:

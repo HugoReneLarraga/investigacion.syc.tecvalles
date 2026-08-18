@@ -306,3 +306,46 @@ header {
 @media (max-width: 850px) {
     .main-layout { flex-direction: column; }
 }
+
+.conv-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+/* Badges (Etiquetas de estado) */
+.badge {
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.badge-cerrada {
+    background-color: #ffebe9;
+    color: #cf222e;
+    border: 1px solid rgba(255, 129, 130, 0.4);
+}
+
+.badge-abierta {
+    background-color: #dafbe1;
+    color: #1a7f37;
+    border: 1px solid rgba(74, 194, 107, 0.4);
+}
+
+/* Estilo para deshabilitar botón cuando está cerrada */
+.btn-conv.disabled {
+    background-color: #e1e4e8 !important;
+    color: #6e7781 !important;
+    cursor: not-allowed;
+    pointer-events: none; /* Bloquea clics en el enlace */
+    box-shadow: none;
+}
+
+.item-cerrado {
+    opacity: 0.85;
+}

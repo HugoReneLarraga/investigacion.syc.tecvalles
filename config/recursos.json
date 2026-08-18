@@ -1,5 +1,11 @@
 [
   {
+    "tipo": "enlace",
+    "titulo": "Revistas nacionales de acceso abierto en el sistema nacional de publicaciones científicas y humanísticas 2026",
+    "url": "data/Resultados_SNPCyH_07082026.pdf",
+    "subtipo": "descargable"
+  },
+  {
     "tipo": "video",
     "titulo": "Tu primera red neuronal en Python y Tensorflow",
     "url": "https://www.youtube.com/watch?v=iX_on3VxZzk&t=2s",
